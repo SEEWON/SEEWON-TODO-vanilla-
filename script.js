@@ -21,17 +21,23 @@ const addToDo = (event) => {
 
   const newDeleteButton = document.createElement('button');
   newDeleteButton.innerHTML = '삭제';
-  newSuccessButton.classList.add('deleteButton');
+  newDeleteButton.classList.add('deleteButton');
   newDiv.appendChild(newDeleteButton); //삭제 버튼
 
   toDoList.appendChild(newDiv);
 };
 
-const deleteToDo = (event) => {
-  const deleteItem = event.target.parentElement; //삭제할 button의 div태그 불러오기
-  deleteItem.remove();
+const clickButtonInToDo = (event) => {
+  const Item = event.target; //
+  if (Item.classList[0] === 'deleteButton') {
+    Item.parentElement.remove();
+  }
+  if (Item.classList[0] === 'successButton') {
+    Item.parentElement.classList.toggle('completed');
+    console.log(Item.parentElement.classList);
+  }
 };
 
 //버튼 클릭 시 함수 실행 Event Listener
 buttonClick.addEventListener('click', addToDo);
-toDoList.addEventListener('click', deleteToDo);
+toDoList.addEventListener('click', clickButtonInToDo);
