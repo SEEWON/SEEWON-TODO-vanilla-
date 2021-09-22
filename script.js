@@ -28,13 +28,12 @@ const addToDo = (event) => {
 };
 
 const clickButtonInToDo = (event) => {
-  const Item = event.target; //
+  const Item = event.target;
   if (Item.classList[0] === 'deleteButton') {
-    Item.parentElement.remove();
+    Item.parentElement.remove(); //상위 element인 div 태그 삭제
   }
   if (Item.classList[0] === 'successButton') {
-    Item.parentElement.classList.toggle('completed');
-    console.log(Item.parentElement.classList);
+    Item.parentElement.classList.toggle('completed'); //달성 시 div 태그의 'completed' 토큰 추가
   }
 };
 
