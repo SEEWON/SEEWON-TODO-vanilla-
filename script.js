@@ -9,7 +9,7 @@ const addToDo = (event) => {
   newDiv.classList.add('toDoDiv'); //1개의 todo를 감쌀 div태그
 
   const newSuccessButton = document.createElement('button');
-  newSuccessButton.innerHTML = '달성';
+  newSuccessButton.innerHTML = '✅';
   newSuccessButton.classList.add('successButton');
   newDiv.appendChild(newSuccessButton); //달성 버튼
 
@@ -20,7 +20,7 @@ const addToDo = (event) => {
   inputToDo.value = ''; //할 일이 들어갈 li태그
 
   const newDeleteButton = document.createElement('button');
-  newDeleteButton.innerHTML = '삭제';
+  newDeleteButton.innerHTML = '❌';
   newDeleteButton.classList.add('deleteButton');
   newDiv.appendChild(newDeleteButton); //삭제 버튼
 
@@ -34,6 +34,7 @@ const clickButtonInToDo = (event) => {
   }
   if (Item.classList[0] === 'successButton') {
     Item.parentElement.classList.toggle('completed'); //달성 시 div 태그의 'completed' 토큰 추가
+    console.log(Item.parentElement.classList);
   }
 };
 

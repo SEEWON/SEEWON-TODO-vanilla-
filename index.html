@@ -8,9 +8,17 @@
   </head>
 
   <body>
+    <header>
+      <h1>오늘 할 일</h1>
+    </header>
     <form>
-      <input class="inputToDo" type="text" placeholder="할 일 추가하기" />
-      <button class="inputButton" type="submit">+</button>
+      <input
+        class="inputToDo"
+        type="text"
+        placeholder="할 일 추가하기"
+        maxlength="20"
+      />
+      <button class="inputButton" type="submit">➕</button>
     </form>
     <div class="toDoContainer">
       <ul class="toDoList"></ul>
