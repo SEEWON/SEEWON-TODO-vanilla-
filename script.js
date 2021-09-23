@@ -20,11 +20,7 @@ const addToDo = (event) => {
   inputToDo.value = ''; //할 일이 들어갈 li태그
 
   const newDeleteButton = document.createElement('button');
-<<<<<<< HEAD
   newDeleteButton.innerHTML = '❌';
-=======
-  newDeleteButton.innerHTML = '삭제';
->>>>>>> 5e653f1cef076bc89f175a7af6b18aae94d10d80
   newDeleteButton.classList.add('deleteButton');
   newDiv.appendChild(newDeleteButton); //삭제 버튼
 
@@ -38,10 +34,6 @@ const clickButtonInToDo = (event) => {
   }
   if (Item.classList[0] === 'successButton') {
     Item.parentElement.classList.toggle('completed'); //달성 시 div 태그의 'completed' 토큰 추가
-<<<<<<< HEAD
-    console.log(Item.parentElement.classList);
-=======
->>>>>>> 5e653f1cef076bc89f175a7af6b18aae94d10d80
   }
 };
 
